@@ -33,7 +33,7 @@
                 </h3>
             </div>
             <div data-role="content">
-              <form id="initialForm" method="post" action="topoffer2.php" data-ajax="false">
+              <form id="initialForm" method="post" action="topoffer2.php">
                 <div data-role="fieldcontain">
                     <label for="selectmenu1">
                         Amount Requested
