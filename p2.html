@@ -24,7 +24,7 @@
         <script>
           $(document).ready(function(){
             $("#fullForm").validate();
-            });
+            }); 
           $(document).ready(function(){
             showCalendar(next_pay_date);
             });
@@ -36,18 +36,18 @@
         <div data-role="page" id="page1">
             <div data-theme="" data-role="header">
                 <h3>
-                    Header
+                    Get Cash
                 </h3>
             </div>
             <div data-role="content">
-              <form id="fullForm" method="get" action="http://www.thepaydayhound.com" data-ajax="false">
+              <form id="fullForm" onSubmit="update_paydates(next_pay_date)" method="get" action="" data-ajax="false">
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup" data-mini="true">
-                        <input name="requested_loan_amount" id="requested_loan_amount" value="<?php echo $_POST["requested_loan_amount"]; ?>" type="" />
-                        <input name="zip" id="zip"  value="<?php echo $_POST["zip"]; ?>" type="" />
-                        <input name="email" id="email" value="<?php echo $_POST["email"]; ?>" type="" />
-                        <input name="birth_date" id="birth_date" value="<?php echo $_POST["birth_date"]; ?>" type="" />
-                        <input name="active_military" id="active_military" value="<?php echo $_POST["active_military"]; ?>" type="" />
+                        <input name="requested_loan_amount" id="requested_loan_amount" value="<?php echo $_POST["requested_loan_amount"]; ?>" type="hidden" />
+                        <input name="zip" id="zip"  value="<?php echo $_POST["zip"]; ?>" type="hidden" />
+                        <input name="email" id="email" value="<?php echo $_POST["email"]; ?>" type="hidden" />
+                        <input name="birth_date" id="birth_date" value="<?php echo $_POST["birth_date"]; ?>" type="hidden" />
+                        <input name="active_military" id="active_military" value="<?php echo $_POST["active_military"]; ?>" type="hidden" />
                     </fieldset>
                 </div>
                 <div data-role="fieldcontain">
@@ -282,6 +282,9 @@
                             Next Payday
                         </label>
                         <input name="next_pay_date" id="next_pay_date" placeholder="" value="" type="text" style="display:none"/>
+                        <input id="pd1m" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" type="text" value="" placeholder="" name="pd1m">
+                        <input id="pd1d" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" type="text" value="" placeholder="" name="pd1d">
+                        <input id="pd1y" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" type="text" value="" placeholder="" name="pd1y">
                     </fieldset>
                 </div>
                 <div data-role="fieldcontain">
@@ -416,7 +419,7 @@
 
 
 
-                <input type="submit" data-theme="e" value="Submit" />
+                <input type="submit" data-theme="e" value="Finished: Submit" />
               </form>  
             </div>
         </div>
