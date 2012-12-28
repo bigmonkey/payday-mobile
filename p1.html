@@ -25,6 +25,17 @@
         </script>
     </head>
     <body>
+        
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K4WS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K4WS');</script>
+<!-- End Google Tag Manager -->
+
         <!-- Home -->
         <div data-role="page" id="page1">
             <div data-theme="" data-role="header">
@@ -33,9 +44,9 @@
                 </h3>
             </div>
             <div data-role="content">
-              <form id="initialForm" method="post" action="p2.php" data-ajax="false">
+              <form id="initialForm" method="post" action="p2.php" onSubmit="update_date(birth_date,birthMonth,birthDay,birthYear);" data-ajax="false">
                 <div data-role="fieldcontain">
-                    <label for="selectmenu1">
+                    <label for="requested_loan_amount">
                         Amount Requested
                     </label>
                     <select id="requested_loan_amount" name="requested_loan_amount"  data-mini="true">
@@ -53,7 +64,7 @@
                 </div>
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup" data-mini="true">
-                        <label for="textinput3">
+                        <label for="zip">
                             Zip Code
                         </label>
                         <input name="zip" id="zip" maxlength=5  value="" type="text" class="required" />
@@ -61,19 +72,18 @@
                 </div>
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup" data-mini="true">
-                        <label for="textinput4">
+                        <label for="email">
                             Email
                         </label>
                         <input name="email" maxlength="70" id="email" type="email" class="required email" />
                     </fieldset>
                 </div>
                 <div data-role="fieldcontain">
-                    <label for="textinput5">
+                    <label>
                         Birthday
                     </label>
                     <fieldset data-role="controlgroup" data-mini="true" data-type="horizontal">
-                      <select name="birthMonth" onChange="update_birth_date();" id="birthMonth" class="required">
-                        <option value="">&nbsp;</option>
+                      <select name="birthMonth" id="birthMonth" class="required">
                         <option value="01" selected="selected">Jan</option>
                         <option value="02">Feb</option>
                         <option value="03">Mar</option>
@@ -87,8 +97,7 @@
                         <option value="11">Nov</option>
                         <option value="12">Dec</option>
                       </select>
-                      <select name="birthDay" onChange="update_birth_date();" id="birthDay" class="required">
-                        <option value="">&nbsp;</option>
+                      <select name="birthDay" id="birthDay" class="required">
                         <option value="01" selected="selected">01</option>
                         <option value="02">02</option>
                         <option value="03">03</option>
@@ -121,8 +130,7 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                       </select>
-                      <select name="birthYear" onChange="update_birth_date();" id="birthYear" class="required">
-                        <option value="">&nbsp;</option>
+                      <select name="birthYear" id="birthYear" class="required">
                         <option value="1994" selected="selected">1994</option>
                         <option value="1993">1993</option>
                         <option value="1992">1992</option>
@@ -224,7 +232,17 @@
                         </label>
                     </fieldset>
                 </div>
-                <input type="submit" data-theme="e" value="Final Step" />
+
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <input id="privacy" class="required" name="privacy" type="checkbox" value="1" /><label for="privacy">I have read and agree to the Privacy Policy and Terms</a>.</label>
+                        <a href="privacy.html" target="_blank">Privacy Policy</a> and <a href="terms.html" target="_blank">Terms</a>
+                    </fieldset>
+                </div>
+
+
+
+                <input type="submit" data-theme="e" value="Go to Last Step" />
               </form>  
             </div>
         </div>

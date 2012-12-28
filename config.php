@@ -39,9 +39,9 @@ $TIERS[] = 12;
 //if you need to test comment out the LIVE URL and uncomment out the TEXT URL.
 //then when you are ready to go live, uncoment the LIVE URL (remove the two // in front of the line) and comment out the TEST URL (add // in front of the line)
 // live post url
-//define('POST_URL',         'http://www.leadhorizon.com/leads/payday/live.php');
+define('POST_URL',         'http://www.leadhorizon.com/leads/payday/live.php');
 // test post url
-define('POST_URL',         'http://www.leadhorizon.com/leads/payday/test.php');
+//define('POST_URL',         'http://www.leadhorizon.com/leads/payday/test.php');
 
 //-----------------------do not change below this line-----------------------------//
 

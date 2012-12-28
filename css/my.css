@@ -4,5 +4,44 @@ label.error {
 	font-size: .8em;
 	padding-top: .5em; 
 	vertical-align: top; 
-	font-weight:bold
+	font-weight:bold;
 }
+
+.mainHeader {
+	text-align: center;
+	font-weight: bold;
+	margin: 0px;
+}
+
+.mainHeader p{
+	padding: 0px;
+	margin: 0px;
+	font-size: .9em;
+}
+
+.mainContent {
+    font-family: helvetica, arial, san-serif;
+    color: #666;
+    margin: 20px auto;
+    text-align: center;
+    font-size: .9em;
+}
+
+h1 {
+	color: #0E8B4D;
+	font-size: 1.2em;
+}
+
+#processingMessage {
+		display: none;
+    font-family: helvetica, arial, san-serif;
+    margin: 3px auto;
+    text-align: center;
+    font-size: .9em;
+}
+
+#processingMessage h4{
+    color: #0E8B4D;
+    font-size: 1.2em;
+}
+
