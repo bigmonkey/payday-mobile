@@ -50,6 +50,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <input name="email" id="email" value="<?php echo $_POST["email"]; ?>" type="hidden" />
                         <input name="birth_date" id="birth_date" value="<?php echo $_POST["birth_date"]; ?>" type="hidden" />
                         <input name="active_military" id="active_military" value="<?php echo $_POST["active_military"]; ?>" type="hidden" />
+                        <input name="account_type" id="account_type" value="checking" type="hidden" />
                     </fieldset>
                 </div>
                 <div data-role="fieldcontain">
@@ -410,22 +411,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
                         <legend>
-                            Account Type
-                        </legend>
-                        <input id="radio5" name="account_type" value="checking" type="radio" checked="checked" />
-                        <label for="radio5">
-                            Checking
-                        </label>
-                        <input id="radio6" name="account_type" value="savings" type="radio"/>
-                        <label for="radio6">
-                            Saving
-                        </label>
-                    </fieldset>
-                </div>
-                <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-                        <legend>
-                            Direct Deposit
+                            Direct Deposit 
                         </legend>
                         <input id="radio7" name="direct_deposit" value="true" type="radio" checked="checked" />
                         <label for="radio7">
@@ -445,7 +431,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup">
                         <label for="account_number">
-                            Account Number
+                            Checking Account Number
                         </label>
                         <input name="account_number" id="account_number" placeholder="" value="" type="text" class="required" />
                     </fieldset>
@@ -453,7 +439,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup">
                         <label for="routing_number">
-                            ABA Number (Routing Number)
+                            ABA Number (or Routing Number)
                         </label>
                         <input name="routing_number" id="routing_number" placeholder="" value="" type="text" maxlength="9" class="required" />
                     </fieldset>
