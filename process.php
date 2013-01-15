@@ -251,7 +251,8 @@ if($lead_approved == 1)
 	//if approved read the contents of hte approved template (that you can edit to add any pixels of your choice.
 	//then redirect the customer to the lender page.
 
-	mail('conway@thepaydayhound.com', 'Approved Lead from RoundSky ', $lead['social_security_number'] . ' and ' . $result_data['server_data']);
+	mail('conway@thepaydayhound.com', 'Approved Lead from RoundSky Andy', $lead['social_security_number'] . ' and ' . $result_data['server_data']);
+	mail('lam.andy@gmail.com', 'Approved Lead from RoundSky for Andy','Lead Approved. Tier: ' . $result_data['tier_id']);
 	
 	$redirect_url = $result_data['redirect'];
 	include('approved.html');
